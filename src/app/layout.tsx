@@ -20,7 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>{children}</body>
+      <body className={`bg-main-light-background ${inter.className}`}>
+        <div className="absolute w-full h-60 rounded-b-3xl -z-10 bg-main-light-background-top"></div>
+        {children}
+      </body>
     </html>
   );
 }
