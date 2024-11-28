@@ -12,7 +12,6 @@ export default function SocialMediaResults({
     <p
       className={`
         flex items-center gap-x-2 font-bold text-[0.75rem] transition-colors duration-300
-        group-hover:text-main-light-background-top
         ${type === "positive" ? "text-results-up" : "text-results-down"}
     `}
     >

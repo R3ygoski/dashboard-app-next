@@ -28,6 +28,7 @@ export default function Home() {
               username={card.username}
               followers={card.followers}
               registered={card.registered}
+              animationDelay={idx + 1}
             />
           );
         })}
@@ -44,6 +45,7 @@ export default function Home() {
               metric={card.metric}
               interactions={card.interactions}
               registered={card.registered}
+              animationDuration={idx + 1}
             />
           );
         })}

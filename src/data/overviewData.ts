@@ -74,7 +74,7 @@ export const overviewData: IOverviewData[] = [
     metric: "Likes",
     registered: {
       quantity: 19,
-      type: "positive",
+      type: "negative",
     },
     interactions: "107",
   },
@@ -83,7 +83,7 @@ export const overviewData: IOverviewData[] = [
     metric: "Total Views",
     registered: {
       quantity: 12,
-      type: "positive",
+      type: "negative",
     },
     interactions: "1407",
   },

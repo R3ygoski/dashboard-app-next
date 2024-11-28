@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { CardProvider } from "@/context/CardContext";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,12 +21,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`bg-main-light-background dark:bg-main-dark-background ${inter.className}`}
-      >
-        <div className="absolute w-full h-60 rounded-b-3xl -z-10 bg-main-light-background-top dark:bg-main-dark-background-top"></div>
-        {children}
-      </body>
+      <CardProvider>
+        <body
+          className={`bg-main-light-background dark:bg-main-dark-background ${inter.className}`}
+        >
+          <div className="absolute w-full h-60 rounded-b-3xl -z-10 bg-main-light-background-top dark:bg-main-dark-background-top"></div>
+          {children}
+        </body>
+      </CardProvider>
     </html>
   );
 }

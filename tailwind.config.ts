@@ -46,6 +46,22 @@ export default {
       screens: {
         xl: "1440px",
       },
+      keyframes: {
+        "up-to-down": {
+          "0%": { transform: "translateY(-20vh)", opacity: "0" },
+          "95%": { opacity: "1" },
+          "100%": { transform: "translateY(0)" },
+        },
+        "down-to-up": {
+          "0%": { transform: "translateY(20vh)", opacity: "0" },
+          "95%": { opacity: "1" },
+          "100%": { transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "up-to-down": "up-to-down 1s ease-in-out forwards",
+        "down-to-up": "down-to-up 1s ease-in-out forwards",
+      },
     },
   },
   plugins: [],

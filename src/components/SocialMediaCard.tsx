@@ -1,14 +1,25 @@
+"use client";
+
 import { socialMediaIcons } from "@/data/iconsData";
 import { ISocialMediaData } from "@/data/socialMediaData";
 import Image from "next/image";
 import SocialMediaResults from "./SocialMediaResults";
+import { useContext } from "react";
+import { CardContext } from "@/context/CardContext";
+
+interface ISocialMediaCardsProps extends ISocialMediaData {
+  animationDelay: number;
+}
 
 export default function SocialMediaCard({
   socialMedia,
   username,
   followers,
   registered,
-}: ISocialMediaData) {
+  animationDelay,
+}: ISocialMediaCardsProps) {
+  const { setCard } = useContext(CardContext);
+
   let border: string = "";
   let subscription: string = "";
 
@@ -42,12 +53,23 @@ export default function SocialMediaCard({
 
   return (
     <article
+      style={{ animationDuration: `${animationDelay * 0.2}s` }}
       className={`
-        group flex flex-col items-center relative h-[13.5rem] pt-6 border-t-4 rounded-b-lg gap-y-2 bg-main-light-card shadow-md
+        flex flex-col items-center relative h-[13.5rem] pt-6 border-t-4 rounded-b-lg gap-y-2 bg-main-light-card shadow-md cursor-pointer duration-150
         after:block after:absolute after:-top-2 after:w-full after:h-2 after:rounded-t-lg
         dark:bg-main-dark-card
+        hover:brightness-90
+        xl:animate-up-to-down
         ${border}
-    `}
+        ${
+          registered.type === "positive"
+            ? "hover:shadow-results-up/25"
+            : "hover:shadow-results-down/25"
+        }
+      `}
+      onClick={() => {
+        setCard(socialMedia);
+      }}
     >
       <div className="flex items-center gap-x-2">
         <Image
