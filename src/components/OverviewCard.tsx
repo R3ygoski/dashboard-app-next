@@ -10,7 +10,7 @@ export default function OverviewCard({
   metric,
 }: IOverviewData) {
   return (
-    <li className="flex flex-col justify-between h-32 p-6 pt-7 pb-5 rounded-lg bg-main-light-card dark:bg-main-dark-card">
+    <li className="flex flex-col justify-between h-32 p-6 pt-7 pb-5 rounded-lg bg-main-light-card dark:bg-main-dark-card lg:w-full xl:w-64">
       <header className="flex justify-between">
         <p className="font-bold text-sm text-main-light-text dark:text-main-dark-text">
           {metric}

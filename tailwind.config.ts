@@ -43,6 +43,9 @@ export default {
           },
         },
       },
+      screens: {
+        xl: "1440px",
+      },
     },
   },
   plugins: [],

@@ -26,7 +26,7 @@ export default function ThemeToggler() {
   }, []);
 
   return (
-    <section className="flex justify-between items-center mt-4">
+    <section className="flex justify-between items-center mt-4 lg:self-start lg:gap-x-3">
       <p className="text-sm font-bold text-main-light-text dark:text-main-dark-text">
         Dark Mode
       </p>
