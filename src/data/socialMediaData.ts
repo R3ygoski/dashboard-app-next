@@ -1,5 +1,5 @@
 export type SocialMediaType = "facebook" | "twitter" | "instagram" | "youtube";
-type FlowType = "positive" | "negative";
+export type FlowType = "positive" | "negative";
 
 export interface IRegistered {
   quantity: number;

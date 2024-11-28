@@ -53,9 +53,9 @@ export default function SocialMediaCard({
 
   return (
     <article
-      style={{ animationDuration: `${animationDelay * 0.2}s` }}
+      style={{ animationDuration: `${animationDelay * 0.25}s` }}
       className={`
-        flex flex-col items-center relative h-[13.5rem] pt-6 border-t-4 rounded-b-lg gap-y-2 bg-main-light-card shadow-md cursor-pointer duration-150
+        flex flex-col items-center relative h-[13.5rem] pt-6 border-t-4 rounded-b-lg gap-y-2 bg-main-light-card shadow-md cursor-pointer duration-150 transition-shadow
         after:block after:absolute after:-top-2 after:w-full after:h-2 after:rounded-t-lg
         dark:bg-main-dark-card
         hover:brightness-90

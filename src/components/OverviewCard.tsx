@@ -23,7 +23,7 @@ export default function OverviewCard({
     <li
       style={{ animationDuration: `${animationDuration * 0.125}s` }}
       className={`
-        flex flex-col justify-between h-32 p-6 pt-7 pb-5 rounded-lg bg-main-light-card duration-150 cursor-pointer shadow-lg
+        flex flex-col justify-between h-32 p-6 pt-7 pb-5 rounded-lg bg-main-light-card cursor-pointer shadow-lg
         dark:bg-main-dark-card
         hover:brightness-90
         lg:w-full 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { CardProvider } from "@/context/CardContext";
+import { FilterProvider } from "@/context/FilterContext";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,12 +23,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <CardProvider>
-        <body
-          className={`bg-main-light-background dark:bg-main-dark-background ${inter.className}`}
-        >
-          <div className="absolute w-full h-60 rounded-b-3xl -z-10 bg-main-light-background-top dark:bg-main-dark-background-top"></div>
-          {children}
-        </body>
+        <FilterProvider>
+          <body
+            className={`h-screen bg-main-light-background overflow-clip dark:bg-main-dark-background ${inter.className}`}
+          >
+            <div className="absolute w-full h-60 rounded-b-3xl -z-10 bg-main-light-background-top dark:bg-main-dark-background-top"></div>
+            {children}
+          </body>
+        </FilterProvider>
       </CardProvider>
     </html>
   );

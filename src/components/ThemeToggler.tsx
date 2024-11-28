@@ -34,7 +34,7 @@ export default function ThemeToggler() {
         className="h-6 w-12 rounded-full bg-theme-toggler-light dark:bg-gradient-to-r dark:from-theme-toggler-dark-1 dark:to-theme-toggler-dark-2"
         onClick={() => handleThemeChange()}
       >
-        <div className="size-[1.125rem] rounded-full duration-300 ease-out bg-main-light-background-top translate-x-[1.7rem] dark:bg-main-dark-background-top dark:translate-x-[0.2rem]"></div>
+        <div className="size-[1.125rem] rounded-full duration-300 ease-out transition-transform bg-main-light-background-top translate-x-[1.7rem] dark:bg-main-dark-background-top dark:translate-x-[0.2rem]"></div>
       </button>
     </section>
   );
