@@ -17,7 +17,7 @@ export default function Home() {
         <div className="h-[1px] w-full mt-6 bg-main-light-text dark:bg-main-dark-text"></div>
       </section>
       <ThemeToggler />
-      <section className="flex flex-col gap-6 w-full mt-8 py-2">
+      <section className="flex flex-col gap-6 w-full mt-8 py-2 sm:grid sm:grid-cols-2">
         {socialMediaData.map((card, idx) => {
           return (
             <SocialMediaCard
@@ -33,7 +33,7 @@ export default function Home() {
       <h2 className="mt-8 font-bold text-2xl text-main-light-strong-text dark:text-main-dark-strong-text">
         Overview - Today
       </h2>
-      <ul className="flex flex-col pt-7 gap-y-3">
+      <ul className="flex flex-col pt-7 gap-3 sm:grid sm:grid-cols-3">
         {overviewData.map((card, idx) => {
           return (
             <OverviewCard
