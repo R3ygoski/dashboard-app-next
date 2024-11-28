@@ -1,9 +1,10 @@
-type SocialMediaType = "facebook" | "twitter" | "instagram" | "youtube";
+export type SocialMediaType = "facebook" | "twitter" | "instagram" | "youtube";
 type FlowType = "positive" | "negative";
 
 export interface IRegistered {
   quantity: number;
   type: FlowType;
+  message?: string;
 }
 
 export interface ISocialMediaData {

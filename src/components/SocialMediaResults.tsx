@@ -3,7 +3,11 @@ import Image from "next/image";
 
 import { resultIcon } from "@/data/iconsData";
 
-export default function SocialMediaResults({ type, quantity }: IRegistered) {
+export default function SocialMediaResults({
+  type,
+  quantity,
+  message,
+}: IRegistered) {
   return (
     <p
       className={`
@@ -13,7 +17,7 @@ export default function SocialMediaResults({ type, quantity }: IRegistered) {
     `}
     >
       <Image src={resultIcon[type]} alt="" width={12} height={12} />
-      {quantity} Today
+      {quantity} {message}
     </p>
   );
 }

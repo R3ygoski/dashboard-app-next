@@ -69,6 +69,7 @@ export default function SocialMediaCard({
       <SocialMediaResults
         type={registered.type}
         quantity={registered.quantity}
+        message="Today"
       />
     </article>
   );
