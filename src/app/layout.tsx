@@ -25,7 +25,7 @@ export default function RootLayout({
       <CardProvider>
         <FilterProvider>
           <body
-            className={`h-screen bg-main-light-background overflow-clip dark:bg-main-dark-background ${inter.className}`}
+            className={`h-screen bg-main-light-background dark:bg-main-dark-background ${inter.className} xl:overflow-clip`}
           >
             <div className="absolute w-full h-60 rounded-b-3xl -z-10 bg-main-light-background-top dark:bg-main-dark-background-top"></div>
             {children}
