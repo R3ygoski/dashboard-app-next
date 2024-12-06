@@ -32,6 +32,13 @@ jobs:
       - name: Build with Next.js
         run: npx next build
 
+      - name: Verify build outpu
+        run: |
+          if [ ! -d ./out ]; then
+            echo "Error: The folder ./out was not built"
+            exit 1
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
