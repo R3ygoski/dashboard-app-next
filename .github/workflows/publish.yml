@@ -32,11 +32,14 @@ jobs:
       - name: Build with Next.js
         run: npx next build
 
-      - name: Verify build outpu
+      - name: Verify build output
         run: |
-          if [ ! -d ./out ]; then
-            echo "Error: The folder ./out was not built"
-            exit 1
+          echo "Starting Next.js build..." 
+          npx next build 
+          echo "Next.js build completed." 
+          if [ ! -d "./out" ]; then 
+            echo "Error: The folder ./out was not built" 
+            exit 1 
           fi
 
       - name: Upload artifact
